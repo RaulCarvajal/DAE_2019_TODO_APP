@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="col">
+    <form [formGroup]="todoForm" (ngSubmit)="saveTodo()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Name of task" formControlName="name">
+        <span style="color:red;" *ngIf="todoForm.controls['name'].touched&&todoForm.controls['name'].errors?.required">Name is required</span>
+      </div>
+      <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="description" placeholder="Description of task" formControlName="description">
+        <span style="color:red;" *ngIf="todoForm.controls['description'].touched&&todoForm.controls['description'].errors?.required">Description is required</span>
+      </div>
+      <div class="form-group">
+        <label for="Description">Date</label>
+        <input type="date" class="form-control" id="Description" formControlName="date">
+        <span style="color:red;" *ngIf="todoForm.controls['date'].touched&&todoForm.controls['date'].errors?.required">Date is required</span>
+      </div>
+  
+      <button type="submit" class="btn btn-success" [disabled]="todoForm.invalid">Save</button>
+  
+    </form>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <hr>
+      <h4 class="text-center w-100">Task detail</h4>
+      <ul>
+        <li>
+          <h5><b>Name:</b> {{tarea.name}}</h5>
+        </li>
+        <li>
+          <h5><b>Detail: </b>{{tarea.description}}</h5>
+        </li>
+        <li>
+          <h5><b>Date </b>{{getDate(tarea.date)}}</h5>
+        </li>
+        <li>
+          <h5><b>Status: </b>{{getStatus(tarea.done)}}</h5>
+        </li>
+      </ul> 
+      <hr>
+      <button class="btn btn-success w-100" (click)="ret()">Regresar(Ver otro)</button>
+    </div>
+  </div>
+</div>
