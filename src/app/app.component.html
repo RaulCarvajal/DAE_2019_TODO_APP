@@ -22,6 +22,32 @@
   </div>
   <br>
   <div class="row">
-    <!--AQUI EDUARDO-->
+    <div class="col-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarea of tareas">
+            <th scope="row">{{tarea.name}}</th>
+            <td>{{getDate(tarea.date)}}</td>
+            <td>{{getStatus(tarea.done)}}</td>
+            <td><button class="btn btn-primary" (click)="viewTarea(tarea._id)" [disabled]="dis"><mat-icon>pageview</mat-icon></button></td>
+            <td><button class="btn btn-warning" (click)="setDone(tarea._id)" [disabled]="tarea.done"><mat-icon>done</mat-icon></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-4">
+      <app-addtodo *ngIf="newtodo"></app-addtodo>
+      <app-dettodo *ngIf="dettodo"></app-dettodo>
+    </div>
+
   </div>
 </div>
