@@ -9,6 +9,7 @@ export class TodoService {
   constructor(private http:HttpClient) { }
 
   getAll(){
+    
     return this.http.get<resArray>("http://127.0.0.1:3003/tareas/getall");
   }
 

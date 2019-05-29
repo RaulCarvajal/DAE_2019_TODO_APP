@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
   getDate(d:string):string{
     return d.substring(0,10);
   }
+  
   getStatus(s:Boolean):string{
     if(s){
       return "Lista";
