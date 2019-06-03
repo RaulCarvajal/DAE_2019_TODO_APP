@@ -10,14 +10,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { TodoService } from "./todo.service";
 import { AddtodoComponent } from './addtodo/addtodo.component';
 import { DettodoComponent } from './dettodo/dettodo.component';
-import { NewTaskComponent } from './new-task/new-task.component';
+//import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddtodoComponent,
     DettodoComponent,
-    NewTaskComponent
+  //  NewTaskComponent
   ],
   imports: [
     HttpClientModule,

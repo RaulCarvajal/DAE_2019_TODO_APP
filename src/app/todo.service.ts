@@ -10,19 +10,19 @@ export class TodoService {
 
   getAll(){
     
-    return this.http.get<resArray>("http://127.0.0.1:3003/tareas/getall");
+    return this.http.get<resArray>("http://127.0.0.1:3031/tareas/getall");
   }
 
   getById(id:string){
-    return this.http.get<res>("http://127.0.0.1:3003/tareas/getbyid/"+id);
+    return this.http.get<res>("http://127.0.0.1:3031/tareas/getbyid/"+id);
   }
 
   create(nuevo:JSON){
-    return this.http.post<res>("http://127.0.0.1:3003/tareas/create",nuevo);
+    return this.http.post<res>("http://127.0.0.1:3031/tareas/create",nuevo);
   }
 
   setDone(id:string){
-    return this.http.patch<res>("http://127.0.0.1:3003/tareas/setdone/"+id,{});
+    return this.http.patch<res>("http://127.0.0.1:3031/tareas/setdone/"+id,{});
   }
   
 }
